@@ -1,7 +1,0 @@
-#!/bin/bash
-input=$(cat)
-IFS=$'\n' read -rd '' -a lines <<< "$input"
-for (( i=0; i<${#lines[@]}; i+=2 )); do
-  echo "${lines[i]}"
-done
-
