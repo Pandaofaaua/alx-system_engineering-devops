@@ -1,12 +1,6 @@
 #!/bin/bash
-
-# Read input from standard input (e.g. piped input or file input)
 input=$(cat)
-
-# Split the input into an array of lines
 IFS=$'\n' read -rd '' -a lines <<< "$input"
-
-# Loop through the lines and print every other line, starting with the first line
 for (( i=0; i<${#lines[@]}; i+=2 )); do
   echo "${lines[i]}"
 done
